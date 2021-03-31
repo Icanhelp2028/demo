@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BLL</name>
+    </assembly>
+    <members>
+        <member name="T:BLL.Services.LoggerService">
+            <summary>记录日志</summary>
+        </member>
+    </members>
+</doc>

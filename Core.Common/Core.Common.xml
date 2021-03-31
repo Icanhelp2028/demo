@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Core.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Core.Common.Extensions.DateTimeExtension">
+            <summary>
+            DateTime.Now.ToString("d")	2016/5/9
+            DateTime.Now.ToString("g")	2016/5/9 13:09
+            DateTime.Now.ToString("G") 	2016/5/9 13:09:55
+            DateTime.Now.ToString("t")	13:09
+            DateTime.Now.ToString("T")	13:09:55
+            </summary>
+        </member>
+        <member name="T:Core.Common.Generic.RedisKeys">
+            <summary>RedisKeys 集中管理</summary>
+        </member>
+        <member name="F:Core.Common.Generic.RedisKeys.User_Logins_Token">
+            <summary>登录信息 Token</summary>
+        </member>
+        <member name="F:Core.Common.Generic.RedisKeys.User_CheckCodes">
+            <summary>验证码</summary>
+        </member>
+        <member name="F:Core.Common.Generic.RedisKeys.User_Sequences_SequenceKey">
+            <summary>流水号</summary>
+        </member>
+        <member name="F:Core.Common.Generic.RedisKeys.User_Lock_SequenceKey">
+            <summary>锁</summary>
+        </member>
+        <member name="T:Core.Common.Services.ICheckCodeService">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="T:Core.Common.Services.ILoginService">
+            <summary>登录信息存储</summary>
+        </member>
+        <member name="T:Core.Common.Services.IRedisContext">
+            <summary>Redis</summary>
+        </member>
+        <member name="P:Core.Common.Services.IRedisContext.Database">
+            <summary>数据存取</summary>
+        </member>
+        <member name="P:Core.Common.Services.IRedisContext.Subscriber">
+            <summary>数据订阅/发布</summary>
+        </member>
+        <member name="T:Core.Common.Services.IResponseService">
+            <summary>返回响应结果</summary>
+        </member>
+        <member name="M:Core.Common.Services.IResponseService.Success(System.Int32,System.String,System.Object)">
+            <summary>成功</summary>
+        </member>
+        <member name="M:Core.Common.Services.IResponseService.Error(System.Int32,System.String,System.String,System.String,System.Object)">
+            <summary>失败，并记录日志</summary>
+        </member>
+        <member name="F:Core.Common.Services.ResponseCode.Success">
+            <summary>成功</summary>
+        </member>
+        <member name="F:Core.Common.Services.ResponseCode.Unauthorized">
+            <summary>没有权限</summary>
+        </member>
+        <member name="F:Core.Common.Services.ResponseCode.Error">
+            <summary>失败</summary>
+        </member>
+        <member name="F:Core.Common.Services.ResponseResult.Success">
+            <summary>成功</summary>
+        </member>
+        <member name="F:Core.Common.Services.ResponseResult.Error">
+            <summary>失败</summary>
+        </member>
+        <member name="F:Core.Common.Services.ResponseResult.Unauthorized">
+            <summary>没有权限</summary>
+        </member>
+        <member name="T:Core.Common.Services.ISecretService">
+            <summary>
+            加密类
+            </summary>
+        </member>
+        <member name="T:Core.Common.Services.ISequenceService">
+            <summary>流水号生成</summary>
+        </member>
+        <member name="M:Core.Common.Services.ISequenceService.GenerateSequence(System.Int32)">
+            <summary>由时间生成的唯一流水号</summary>
+        </member>
+        <member name="M:Core.Common.Services.ISequenceService.GenerateIdentity(System.Int32)">
+            <summary>由递增生成的唯一id</summary>
+        </member>
+        <member name="T:Core.Common.Services.ISysClockService">
+            <summary>服务器当前时间</summary>
+        </member>
+        <member name="T:Core.Common.Services.IUserContextAccessor">
+            <summary>登录信息</summary>
+        </member>
+        <member name="T:Core.Common.Services.UserRole">
+            <summary>角色</summary>
+        </member>
+        <member name="F:Core.Common.Services.UserRole.Guest">
+            <summary>
+            游客
+            </summary>
+        </member>
+        <member name="F:Core.Common.Services.UserRole.User">
+            <summary>
+            会员
+            </summary>
+        </member>
+        <member name="F:Core.Common.Services.UserRole.Agent">
+            <summary>
+            代理
+            </summary>
+        </member>
+    </members>
+</doc>

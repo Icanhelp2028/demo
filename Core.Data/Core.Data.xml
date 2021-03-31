@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Core.Data</name>
+    </assembly>
+    <members>
+        <member name="T:Core.Data.Services.CheckCodeService">
+            <summary>验证码方法一，验证码攻击无效，只对验证码验证时攻击才有效</summary>
+        </member>
+        <member name="M:Core.Data.Services.CheckCodeService.#ctor(Core.Common.Services.IRedisContext,Core.Common.Services.ISecretService,Core.Common.Services.ISysClockService)">
+            <summary>验证码</summary>
+        </member>
+        <member name="M:Core.Data.Services.CheckCodeService.IsValidCode(System.String,System.String)">
+            <summary>解密对比验证码和有效期</summary>
+        </member>
+        <member name="M:Core.Data.Services.CheckCodeService.SetCheckCode(System.String)">
+            <summary>返回加密的(验证码和有效期)guid</summary>
+        </member>
+        <member name="T:Core.Data.Services.LoginService">
+            <summary>登录信息存储</summary>
+        </member>
+        <member name="F:Core.Data.Services.LoginService.Expiry">
+            <summary>有效期</summary>
+        </member>
+        <member name="M:Core.Data.Services.LoginService.#ctor(Core.Common.Services.IRedisContext)">
+            <summary>登录信息存储</summary>
+        </member>
+        <member name="M:Core.Data.Services.LoginService.Login(Core.Common.Services.UserInfo)">
+            <summary>登入</summary>
+            <param name="userInfo">会员数据</param>
+            <returns>返回token</returns>
+        </member>
+        <member name="M:Core.Data.Services.LoginService.Logout(System.String)">
+            <summary>登出</summary>
+            <param name="token">token</param>
+        </member>
+        <member name="M:Core.Data.Services.LoginService.Update(System.String,Core.Common.Services.UserInfo)">
+            <summary>更新</summary>
+            <param name="token">token</param>
+            <param name="userInfo">会员数据</param>
+        </member>
+        <member name="M:Core.Data.Services.LoginService.Get(System.String)">
+            <summary>获取</summary>
+            <param name="token">token</param>
+        </member>
+        <member name="M:Core.Data.Services.LoginService.AddExpire(System.String)">
+            <summary>重设会员数据的有效期</summary>
+            <param name="token">token</param>
+        </member>
+        <member name="T:Core.Data.Services.RedisContext">
+            <summary>Redis</summary>
+        </member>
+        <member name="T:Core.Data.Services.ResponseService">
+            <summary>返回响应结果</summary>
+        </member>
+        <member name="M:Core.Data.Services.ResponseService.#ctor(Microsoft.Extensions.Logging.ILogger)">
+            <summary>返回响应结果</summary>
+        </member>
+        <member name="T:Core.Data.Services.SecretService">
+            <summary>使用自定义的base64，使其无法暴力破解</summary>
+        </member>
+        <member name="M:Core.Data.Services.SecretService.Decrypt(System.String)">
+            <summary>解密</summary>
+        </member>
+        <member name="M:Core.Data.Services.SecretService.Encrypt(System.String)">
+            <summary>加密</summary>
+        </member>
+        <member name="M:Core.Data.Services.SecretService.Hash(System.String)">
+            <summary>Hash</summary>
+        </member>
+        <member name="M:Core.Data.Services.SecretService.ChaoticHex(System.Byte[])">
+            <summary>自定义打乱的hex</summary>
+        </member>
+        <member name="T:Core.Data.Services.SecretService.ChaoticBase64">
+            <summary>自定义打乱的base64</summary>
+        </member>
+        <member name="F:Core.Data.Services.SecretService.ChaoticBase64.base64Table">
+            <summary>使用符合变量命名的字符</summary>
+        </member>
+        <member name="F:Core.Data.Services.SecretService.ChaoticBase64.base64Index">
+            <summary>字符映射表</summary>
+        </member>
+        <member name="T:Core.Data.Services.SequenceService">
+            <summary>流水号生成</summary>
+        </member>
+        <member name="M:Core.Data.Services.SequenceService.GenerateSequence(System.Int32)">
+            <summary>由时间生成的唯一流水号</summary>
+        </member>
+        <member name="M:Core.Data.Services.SequenceService.GenerateIdentity(System.Int32)">
+            <summary>由递增生成的唯一id</summary>
+        </member>
+        <member name="T:Core.Data.Services.SysClockService">
+            <summary>服务器当前时间</summary>
+        </member>
+        <member name="M:Core.Data.Services.SysClockService.#ctor(System.String)">
+            <summary>服务器当前时间</summary>
+        </member>
+        <member name="T:Core.Data.Services.UserContextAccessor`1">
+            <summary>登录信息</summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Core.Data.Services.QueryToken.TokenKey" -->
+        <!-- Badly formed XML comment ignored for member "P:Core.Data.Services.HeaderToken.TokenKey" -->
+    </members>
+</doc>

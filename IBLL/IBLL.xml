@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IBLL</name>
+    </assembly>
+    <members>
+        <member name="F:IBLL.Injections.ChatNotifyType.UserMsg">
+            <summary>
+            一般消息
+            </summary>
+        </member>
+        <member name="F:IBLL.Injections.ChatNotifyType.EnterGroup">
+            <summary>
+            会员进入群组
+            </summary>
+        </member>
+        <member name="F:IBLL.Injections.ChatNotifyType.ExitGroup">
+            <summary>
+            会员离开群组
+            </summary>
+        </member>
+        <member name="P:IBLL.Injections.ChatUserInfo.UserId">
+            <summary>会员ID</summary>
+        </member>
+        <member name="P:IBLL.Injections.ChatUserInfo.NickName">
+            <summary>会员昵称</summary>
+        </member>
+        <member name="P:IBLL.Injections.ChatUserInfo.Logo">
+            <summary>会员头像</summary>
+        </member>
+        <member name="P:IBLL.Injections.ChatUserInfo.Descr">
+            <summary>会员心情</summary>
+        </member>
+        <member name="P:IBLL.Injections.ChatUserInfo.Level">
+            <summary>会员等级</summary>
+        </member>
+        <member name="P:IBLL.Injections.ChatMessage.FromUser">
+            <summary>谁发的信息</summary>
+        </member>
+        <member name="P:IBLL.Injections.ChatMessage.ToGroup">
+            <summary>哪个群组接收信息</summary>
+        </member>
+        <member name="P:IBLL.Injections.ChatMessage.Text">
+            <summary>文本内容</summary>
+        </member>
+        <member name="P:IBLL.Injections.ChatMessage.Data">
+            <summary>非文本内容</summary>
+        </member>
+        <member name="P:IBLL.Injections.ChatMessage.Notify">
+            <summary>消息类型</summary>
+        </member>
+        <member name="P:IBLL.Injections.ChatGroup.Id">
+            <summary>群组ID</summary>
+        </member>
+        <member name="P:IBLL.Injections.ChatGroup.Name">
+            <summary>群组名称</summary>
+        </member>
+        <member name="M:IBLL.Injections.IChatBLL.CreateGroup(System.String)">
+            <summary>新建群组</summary>
+        </member>
+        <member name="M:IBLL.Injections.IChatBLL.AddGroup(System.Int32,System.Int32[])">
+            <summary>增加会员入群权限</summary>
+        </member>
+        <member name="M:IBLL.Injections.IChatBLL.RemoveGroup(System.Int32,System.Int32[])">
+            <summary>移出会员入群权限</summary>
+        </member>
+        <member name="M:IBLL.Injections.IChatBLL.GetGroupsFromUserId(System.Int32)">
+            <summary>获取所有群组</summary>
+        </member>
+        <member name="M:IBLL.Injections.IChatBLL.GetUsersInfoFromGroup(System.Int32)">
+            <summary>获取群组成员</summary>
+        </member>
+        <member name="M:IBLL.Injections.IChatBLL.GetChatMsg(System.Int32)">
+            <summary>获取群组消息</summary>
+        </member>
+        <member name="M:IBLL.Injections.IChatBLL.GetUsersFromUserId(System.Int32)">
+            <summary>获取所有成员，成员->群组->成员</summary>
+        </member>
+        <member name="M:IBLL.Injections.IChatBLL.SendMsg(System.Int32,IBLL.Injections.ChatMessage)">
+            <summary>发送消息到群组</summary>
+        </member>
+    </members>
+</doc>

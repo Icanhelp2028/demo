@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApp</name>
+    </assembly>
+    <members>
+        <member name="T:WebApp.Authentication.CustomAuthenticationSchemeOptions">
+            <summary>
+            角色身份验证配置
+            </summary>
+        </member>
+        <member name="T:WebApp.Authentication.CustomAuthenticationHandler">
+            <summary>
+            角色身份认证
+            </summary>
+        </member>
+        <member name="M:WebApp.Authentication.CustomAuthenticationHandler.HandleAuthenticateAsync">
+            <summary>
+            DefaultScheme,授权
+            </summary>
+        </member>
+        <member name="M:WebApp.Authentication.CustomAuthenticationHandler.HandleChallengeAsync(Microsoft.AspNetCore.Authentication.AuthenticationProperties)">
+            <summary>
+            DefaultChallengeScheme,禁止访问401 Unauthorized
+            认证错误，表示这个请求没有被服务器认证或者客户端传送的证书错误，可以修改后在进行重试
+            </summary>
+        </member>
+        <member name="M:WebApp.Authentication.CustomAuthenticationHandler.HandleForbiddenAsync(Microsoft.AspNetCore.Authentication.AuthenticationProperties)">
+            <summary>
+            DefaultForbidScheme,禁止访问403 Forbidden
+            用户认证后，但权限不足，无法对该资源进行操作
+            </summary>
+        </member>
+        <member name="T:WebApp.Authorization.AnonymousPolicyAuthorizationHandler">
+            <summary>
+            鉴定是否为匿名
+            </summary>
+        </member>
+        <member name="M:WebApp.Controllers.HomeController.Login(Core.Common.Services.ILoginService,Core.Common.Services.ICheckCodeService,System.String,System.String,System.String)">
+            <summary>登录</summary>
+        </member>
+        <member name="M:WebApp.Controllers.HomeController.Register(Core.Common.Services.ICheckCodeService,System.String,System.String,System.String)">
+            <summary>注册</summary>
+        </member>
+        <member name="M:WebApp.Controllers.HomeController.GetCheckCode(Core.Common.Services.ICheckCodeService,System.Int32,System.Int32)">
+            <summary>验证码</summary>
+        </member>
+        <member name="M:WebApp.Controllers.UserController.GetUserInfo">
+            <summary>会员信息</summary>
+        </member>
+        <member name="M:WebApp.Controllers.UserController.CheckIn">
+            <summary>签到</summary>
+        </member>
+        <member name="T:WebApp.Filters.ExceptionFilter">
+            <summary>异常处理</summary>
+        </member>
+    </members>
+</doc>
