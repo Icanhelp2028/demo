@@ -9,6 +9,7 @@ namespace IocDemo
         {
             App app = new App();
 
+            // 自己实现注入
             MyServiceProvider services = new MyServiceProvider();
             app.ConfigureMyServices(services);
 
