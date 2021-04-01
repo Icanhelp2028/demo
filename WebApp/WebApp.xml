@@ -31,11 +31,6 @@
             用户认证后，但权限不足，无法对该资源进行操作
             </summary>
         </member>
-        <member name="T:WebApp.Authorization.AnonymousPolicyAuthorizationHandler">
-            <summary>
-            鉴定是否为匿名
-            </summary>
-        </member>
         <member name="M:WebApp.Controllers.HomeController.Login(Core.Common.Services.ILoginService,Core.Common.Services.ICheckCodeService,System.String,System.String,System.String)">
             <summary>登录</summary>
         </member>
