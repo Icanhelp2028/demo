@@ -20,7 +20,7 @@
     <script src="/signalr.js"></script>
     <script>
         function change() {
-            $.get('https://localhost:44320/api/GetCheckCode', function (e) {
+            $.post('https://localhost:44320/api/GetCheckCode', function (e) {
                 document.getElementById('code').src = e.data.image;
                 document.getElementById('codeid').value = e.data.codeid;
             });

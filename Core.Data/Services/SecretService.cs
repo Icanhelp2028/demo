@@ -10,13 +10,14 @@ namespace Core.Data.Services
     public sealed class SecretService : ISecretService
     {
         private static readonly byte[] KEY = new byte[] { 0x12, 0x34, 0x56, 0x78, 0x90, 0xAB, 0xCD, 0xEF };
-        private static readonly byte[] IV = new byte[] { 65, 20, 91, 123, 102, 126, 105, 28, 15, 13, 51, 32, 53, 45, 97, 40 };
+        //private static readonly byte[] IV = new byte[] { 65, 20, 91, 123, 102, 126, 105, 28, 15, 13, 51, 32, 53, 45, 97, 40 };
         private static readonly string HEX = "mngwsutcevorzayx";
 
         /// <summary>解密</summary>
-        public string Decrypt(string encrypt)
+        public string Decrypt(string encrypt, string iv)
         {
             byte[] byteArray = ChaoticBase64.FromBase64String(encrypt);
+            byte[] IV = Encoding.ASCII.GetBytes(iv);
 
             using var ms = new MemoryStream();
             using var des = new DESCryptoServiceProvider();
@@ -30,9 +31,10 @@ namespace Core.Data.Services
         }
 
         /// <summary>加密</summary>
-        public string Encrypt(string plain)
+        public string Encrypt(string plain, string iv)
         {
             byte[] byteArray = Encoding.UTF8.GetBytes(plain);
+            byte[] IV = Encoding.ASCII.GetBytes(iv);
 
             using var ms = new MemoryStream();
             using var des = new DESCryptoServiceProvider();

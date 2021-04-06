@@ -59,10 +59,10 @@
         <member name="T:Core.Data.Services.SecretService">
             <summary>使用自定义的base64，使其无法暴力破解</summary>
         </member>
-        <member name="M:Core.Data.Services.SecretService.Decrypt(System.String)">
+        <member name="M:Core.Data.Services.SecretService.Decrypt(System.String,System.String)">
             <summary>解密</summary>
         </member>
-        <member name="M:Core.Data.Services.SecretService.Encrypt(System.String)">
+        <member name="M:Core.Data.Services.SecretService.Encrypt(System.String,System.String)">
             <summary>加密</summary>
         </member>
         <member name="M:Core.Data.Services.SecretService.Hash(System.String)">

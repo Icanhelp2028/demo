@@ -35,7 +35,7 @@ namespace Core.Data.Services
 
             try
             {
-                var str = _secretService.Decrypt(codeid);
+                var str = _secretService.Decrypt(codeid, "|" + code + "|" + code + "|" + code + "|");
                 var values = str.Split('@', 2);
 
                 var now = _sysClockService.GetDate();
@@ -68,7 +68,7 @@ namespace Core.Data.Services
         public string SetCheckCode(string code)
         {
             var expire = _sysClockService.GetDate().AddSeconds(EXPIRE);
-            var guid = _secretService.Encrypt(code + "@" + expire.ToString("yyyyMMddHHmmss"));
+            var guid = _secretService.Encrypt(code + "@" + expire.ToString("yyyyMMddHHmmss"), "|" + code + "|" + code + "|" + code + "|");
             return guid;
         }
     }
