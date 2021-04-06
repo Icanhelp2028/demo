@@ -13,6 +13,11 @@ namespace Core.Data.Services
         //private static readonly byte[] IV = new byte[] { 65, 20, 91, 123, 102, 126, 105, 28, 15, 13, 51, 32, 53, 45, 97, 40 };
         private static readonly string HEX = "mngwsutcevorzayx";
 
+        public string GenerateIV()
+        {
+            return Guid.NewGuid().ToString("n").Substring(0, 16);
+        }
+
         /// <summary>解密</summary>
         public string Decrypt(string encrypt, string iv)
         {
