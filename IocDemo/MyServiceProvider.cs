@@ -190,6 +190,7 @@ namespace IocDemo
             foreach (var parameter in constructor.GetParameters())
             {
                 var descriptor = GetServiceDescriptor(parameter.ParameterType);
+                // 单例不能访问Scoped的实例
                 if (serviceDescriptor.Scope == MyServiceScope.Singleton)
                 {
                     if (descriptor.Scope == MyServiceScope.Scoped)

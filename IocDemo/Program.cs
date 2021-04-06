@@ -31,10 +31,16 @@ namespace IocDemo
     {
         public void ConfigureMyServices(IMyServiceCollection services)
         {
+            // 线程间共享
             services.AddScoped<IMain, Main>();
             services.AddScoped<IThreadA, ThreadA>();
             services.AddScoped<IThreadB, ThreadB>();
+
+            // 单例
             services.AddSingleton<IThreadC, ThreadC>();
+
+            //// 临时
+            //services.AddTransient<IThreadC, ThreadC>();
         }
 
         public void Starup(IMain main)
