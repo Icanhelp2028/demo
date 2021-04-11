@@ -5,4 +5,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="OtherDemo\代码 - 复制\**" />
+    <EmbeddedResource Remove="OtherDemo\代码 - 复制\**" />
+    <None Remove="OtherDemo\代码 - 复制\**" />
+  </ItemGroup>
+
 </Project>
